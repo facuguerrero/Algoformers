@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.algoFormers.vista.eventos.ControladorAtaque">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ImagenEnemigo1" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="Vida1" prefHeight="16.0" prefWidth="124.0" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Label>
+                     </children>
+                  </HBox>
+                  <RadioButton fx:id="SeleccionEnemigo1" mnemonicParsing="false" onAction="#SeleccionarEnemigo1" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ImagenEnemigo2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="Vida2" prefHeight="16.0" prefWidth="110.0" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <RadioButton fx:id="SeleccionEnemigo2" mnemonicParsing="false" onAction="#SeleccionarEnemigo2" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="124.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ImagenEnemigo3" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="Vida3" prefHeight="16.0" prefWidth="107.0" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <RadioButton fx:id="SeleccionEnemigo3" mnemonicParsing="false" onAction="#SeleccionarEnemigo3" />
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <Label fx:id="CartelMensaje" text="Seleccionar Enemigo A Atacar" textFill="WHITE" BorderPane.alignment="BOTTOM_CENTER">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <bottom>
+      <VBox prefHeight="55.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="BotonCancelar" mnemonicParsing="false" onAction="#CancelarAtaque" text="Cancelar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="BotonAtacar" mnemonicParsing="false" onAction="#Atacar" text="Atacar" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <Label fx:id="NotificacionError" alignment="CENTER" prefHeight="26.0" prefWidth="286.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

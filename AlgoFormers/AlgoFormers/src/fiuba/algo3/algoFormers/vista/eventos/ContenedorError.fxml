@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.algoFormers.vista.eventos.ControladorError">
+   <children>
+      <Label fx:id="MensajeError" alignment="CENTER" contentDisplay="CENTER" prefHeight="241.0" prefWidth="422.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

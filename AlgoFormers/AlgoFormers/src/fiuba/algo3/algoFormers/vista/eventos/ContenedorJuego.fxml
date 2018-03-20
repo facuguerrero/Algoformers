@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.algoFormers.vista.eventos.ControladorJuego">
+   <center>
+      <ScrollPane prefHeight="451.0" prefWidth="764.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <GridPane prefHeight="81.0" prefWidth="764.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="BotonFinalizarTurno" mnemonicParsing="false" onAction="#FinalzarTurno" prefHeight="50.0" prefWidth="94.0" text="Finalizar &#10;Turno" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="BotonCombinar" mnemonicParsing="false" onAction="#Combinar" text="Combinar" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="BotonTransformar" mnemonicParsing="false" onAction="#Transformar" text="Transformar" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="BotonAtacar" mnemonicParsing="false" onAction="#Atacar" text="Atacar" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="BotonMover" mnemonicParsing="false" onAction="#Mover" text="Mover" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton fx:id="Personaje1" mnemonicParsing="false" onAction="#SeleccionarPersonajeActual1" prefHeight="61.0" prefWidth="65.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <Label fx:id="Vida1" prefHeight="16.0" prefWidth="181.0" text="Vida:" textFill="WHITE" />
+                        <Label fx:id="Poder1" prefHeight="16.0" prefWidth="81.0" text="Poder:" textFill="WHITE" />
+                        <Label fx:id="Rango1" prefHeight="16.0" prefWidth="131.0" text="Rango:" textFill="WHITE" />
+                        <Label fx:id="Vel1" prefHeight="16.0" prefWidth="129.0" text="Vel:" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="Vida2" prefHeight="16.0" prefWidth="155.0" text="Vida:" textFill="WHITE" />
+                        <Label fx:id="Poder2" prefHeight="16.0" prefWidth="81.0" text="Poder:" textFill="WHITE" />
+                        <Label fx:id="Rango2" prefHeight="16.0" prefWidth="88.0" text="Rango:" textFill="WHITE" />
+                        <Label fx:id="Vel2" prefHeight="16.0" prefWidth="124.0" text="Vel:" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <ToggleButton fx:id="Personaje2" mnemonicParsing="false" onAction="#SeleccionarPersonajeActual2" prefHeight="61.0" prefWidth="65.0" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton fx:id="Personaje3" mnemonicParsing="false" onAction="#SeleccionarPersonajeActual3" prefHeight="61.0" prefWidth="65.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="Vida3" prefHeight="16.0" prefWidth="75.0" text="Vida:" textFill="WHITE" />
+                        <Label fx:id="Poder3" prefHeight="16.0" prefWidth="81.0" text="Poder:" textFill="WHITE" />
+                        <Label fx:id="Rango3" prefHeight="16.0" prefWidth="112.0" text="Rango:" textFill="WHITE" />
+                        <Label fx:id="Vel3" prefHeight="16.0" prefWidth="150.0" text="Vel:" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="21.0" prefWidth="764.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BotonSalir" mnemonicParsing="false" onAction="#Salir" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

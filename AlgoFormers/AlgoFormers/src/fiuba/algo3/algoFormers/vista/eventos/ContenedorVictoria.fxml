@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.algoFormers.vista.eventos.ControladorVictoria">
+   <children>
+      <Label fx:id="CartelGanador" textFill="WHITE" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="210.0" />
+         </VBox.margin>
+      </Label>
+      <HBox>
+         <children>
+            <ImageView fx:id="ImagenVictoria" fitHeight="212.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ImagenTrofeo" fitHeight="215.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
